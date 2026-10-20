@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    height: 276px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.logos img:first-child {
+    width: 145px;
+}
+
+.logos img:last-child {
+    width: 190px;
+}
+
+.menu {
+    width: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.menu div {
+    height: 4px;
+    width: 35px;
+    background: black;
+}
+
+/* HERO */
+.hero {
+    height: 440px;
+    width: 100%;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-title {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+    color: white;
+    font-size: clamp(27px, 4.5vw, 40px);
+    font-weight: bold;
+    text-shadow: 0 2px 5px #333;
+}
+
+/* FLIGHTS */
+.flights {
+    padding: 35px 8%;
+}
+
+.tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 12px;
+    color: #777;
+    font-size: 16px;
+    border-bottom: 5px solid transparent;
+}
+
+.tab.active {
+    border-bottom-color: #e31843;
+}
+
+.flight-table {
+    width: 100%;
+}
+
+.flight-row {
+    display: grid;
+    grid-template-columns: 0.65fr 1.8fr 1.8fr 1fr 0.8fr;
+    gap: 12px;
+    align-items: center;
+    font-size: 13px;
+    padding: 11px 5px;
+}
+
+.flight-heading {
+    font-weight: bold;
+}
+
+/* PARIS */
+.paris {
+    width: 90.5%;
+    margin: 0 auto 40px;
+}
+
+.paris img {
+    width: 100%;
+    height: auto;
+}
+
+/* TRAVEL */
+.travel {
+    width: 90.5%;
+    margin: auto;
+}
+
+.travel-title {
+    text-align: center;
+    padding: 0 0 24px;
+}
+
+.title {
+    font-size: 29px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.description {
+    font-size: 25px;
+    line-height: 1.7;
+}
+
+.travel-image,
+.coffee {
+    width: 100%;
+    position: relative;
+}
+
+.travel-image img,
+.coffee img {
+    width: 100%;
+    height: auto;
+}
+
+.service {
+    position: absolute;
+    background: #080808;
+    color: white;
+    text-align: center;
+    padding: 7px 10px;
+    font-size: clamp(15px, 3vw, 27px);
+}
+
+.wayfinding {
+    top: 13%;
+    left: 0;
+    width: 44%;
+}
+
+.seating {
+    top: 13%;
+    right: 0;
+    width: 29%;
+}
+
+.wifi {
+    top: 48%;
+    left: 15%;
+    width: 30%;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 22px;
+    background: #25265f;
+    color: white;
+    text-align: center;
+    padding: 38px 15px 30px;
+}
+
+.footer-title {
+    font-size: clamp(24px, 4vw, 37px);
+    font-weight: bold;
+    line-height: 1.65;
+    margin-bottom: 25px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin-bottom: 28px;
+}
+
+.social div {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.copyright {
+    font-size: 23px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .header {
+        height: 276px;
+        padding: 0 5%;
+    }
+
+    .logos {
+        gap: 12px;
+        max-width: calc(100% - 40px);
+    }
+
+    .logos img:first-child {
+        width: 145px;
+    }
+
+    .logos img:last-child {
+        width: 185px;
+    }
+
+    .hero {
+        height: 440px;
+    }
+
+    .hero-title {
+        font-size: 37px;
+    }
+
+    .flights {
+        padding: 35px 6%;
+    }
+
+    .flight-table {
+        overflow-x: auto;
+    }
+
+    .flight-row {
+        min-width: 610px;
+        grid-template-columns: 0.65fr 1.8fr 1.8fr 1fr 0.8fr;
+    }
+
+    .paris,
+    .travel {
+        width: 90.5%;
+    }
+
+    .title {
+        font-size: 27px;
+    }
+
+    .description {
+        font-size: 25px;
+    }
+
+    .footer-title {
+        font-size: 29px;
+    }
+
+    .copyright {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header {
+        height: 200px;
+    }
+
+    .logos {
+        gap: 8px;
+    }
+
+    .logos img:first-child {
+        width: 105px;
+    }
+
+    .logos img:last-child {
+        width: 120px;
+    }
+
+    .hero {
+        height: 320px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .title {
+        font-size: 23px;
+    }
+
+    .description {
+        font-size: 19px;
+    }
+
+    .footer-title {
+        font-size: 23px;
+    }
+
+    .copyright {
+        font-size: 18px;
+    }
+}
